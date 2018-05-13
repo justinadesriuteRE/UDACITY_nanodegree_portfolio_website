@@ -1,0 +1,244 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+/*header styling*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 160px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.headerWrapper {
+    height: 160px;
+    background-color: #efd2d2;
+}
+
+.flipper {
+  width: 160px;
+  height: 160px;
+  margin: 5px;
+  float: right;
+}
+
+.image {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px
+}
+
+.flipper > .logo {
+    position: absolute;
+    transform: perspective( 600px ) rotateY( 0deg );
+    -webkit-transform: perspective( 600px ) rotateY( 0deg );
+    width: 140px; height: 140px; border-radius: 70px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flipper > .foto {
+    position: absolute;
+    transform: perspective( 600px ) rotateY( 180deg );
+    -webkit-transform: perspective( 600px ) rotateY( 180deg );
+    width: 140px; height: 140px; border-radius: 70px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flipper:hover > .logo {
+    transform: perspective( 600px ) rotateY( -180deg );
+}
+
+.flipper:hover > .foto {
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+
+.logoDiv {
+    width: 120px;
+    height: 120px;
+}
+
+.logo {
+    border-radius: 70px;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+}
+
+.foto {
+    border-radius: 70px;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+}
+
+/*main section styling*/
+.surrounder {
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 170px;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.text {
+    text-align: center;
+}
+
+.logos {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.tech-logo {
+    width: 25%;
+    height: 25%;
+    margin: 5px;
+}
+
+.element:nth-child(2n) {
+    flex-basis: 100%;
+}
+
+.animal {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.dogy {
+    width: 220px;
+}
+
+.real-last {
+    flex: 4;
+    order: 4;
+    background-color: #ffd27f;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.last {
+    flex: 3;
+    order: 3;
+    background-color: darkkhaki;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.first {
+    flex: 2;
+    order: 1;
+    background-color: lightcoral;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.middle {
+    flex: 1;
+    order: 2;
+    background-color: lavender;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+/*footer styling*/
+a {
+    text-decoration: none;
+}
+
+.footer {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: #efd2d2;
+}
+
+.socialIcon {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.copyrightSvg {
+    margin: 4px 3px 0 5px;
+    width: 10px;
+    height: 10px;
+    float: right;
+}
+
+ul#socialMedia li {
+    display: inline;
+    padding: 0;
+}
+
+ul#socialMedia {
+    margin: 5px 0px 0px 0px;
+    display: flex;
+    float: left;
+    padding-left: 0;
+}
+
+.info {
+    width: 100%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+    /* display: flex;*/
+}
+
+.copyright {
+    margin-top: 10px;
+    margin-left: 5px;
+    float: right;
+}
+
+.name {
+    float: center;
+}
+
+@media only screen and (max-width: 670px) {
+    .real-last {
+        margin-left: 0;
+        max-width: 330px;
+        overflow: hidden;
+    }
+    .last {
+        width: 330px;
+    }
+    .middle {
+        margin-left: 50px;
+    }
+}
+
+
